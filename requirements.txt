@@ -1,0 +1,6 @@
+fastapi
+pydantic-ai
+chromadb
+pydantic-settings
+uvicorn
+requests

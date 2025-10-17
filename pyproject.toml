@@ -1,0 +1,17 @@
+[project]
+name = "itc-fyn"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb>=1.1.1",
+    "fastapi>=0.119.0",
+    "pydantic-ai>=1.0.17",
+    "sentence-transformers>=5.1.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.0.0",
+]
