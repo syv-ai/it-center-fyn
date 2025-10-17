@@ -212,7 +212,7 @@ async def chat_completions(request: ChatCompletionRequest):
         if result and deps.thoughts:
             print(f"DEBUG: len(deps.thoughts) = {len(deps.thoughts)}")
             print(f"DEBUG: deps.thoughts = {deps.thoughts}")
-        
+
         # Update conversation history
         conversations[session_id] = result.all_messages()
         
@@ -239,3 +239,7 @@ async def chat_completions(request: ChatCompletionRequest):
             "total_tokens": usage.input_tokens + usage.output_tokens
         }
     }
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
